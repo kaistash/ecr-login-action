@@ -8,7 +8,7 @@ $INPUT_REGION
 text
 EOF
 
-connectionString=$(aws ecr get-login)
+connectionString=$(aws ecr get-login --region=us-east-1)
 cleanedConnection=$(echo $connectionString | sed -e "s/docker login -u //g" | sed -e "s/ -p//g" | sed -e "s/ -e none//g")
 connectionParts=($cleanedConnection)
 
