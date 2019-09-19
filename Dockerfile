@@ -4,7 +4,7 @@ LABEL "com.github.actions.description"="Logs into ECR and provides Docker creden
 LABEL "com.github.actions.icon"="log-in"
 LABEL "com.github.actions.color"="orange"
 
-LABEL "repository"="https://github.com/elgohr/ecr-login-action"
+LABEL "repository"="https://github.com/delpic/ecr-login-action"
 LABEL "maintainer"="Lars Gohr"
 
 RUN apk update \
