@@ -13,8 +13,8 @@ cleanedConnection=$(echo $connectionString | sed -e "s/docker login -u //g" | se
 connectionParts=($cleanedConnection)
 
 echo ::set-output name=username::"${connectionParts[0]}"
-echo ::add-mask::${USERNAME}
+echo ::add-mask::${connectionParts[0]}
 echo ::set-output name=password::"${connectionParts[1]}"
-echo ::add-mask::${PASSWORD}
+echo ::add-mask::$connectionParts[0]
 echo ::set-output name=registry::"${connectionParts[2]}"
-echo ::add-mask::${REGISTRY}
+echo ::add-mask::${connectionParts[0]}
