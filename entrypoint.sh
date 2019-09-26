@@ -15,6 +15,6 @@ connectionParts=($cleanedConnection)
 echo ::set-output name=username::"${connectionParts[0]}"
 echo ::add-mask::${connectionParts[0]}
 echo ::set-output name=password::"${connectionParts[1]}"
-echo ::add-mask::$connectionParts[0]
+echo ::add-mask::$connectionParts[1]
 echo ::set-output name=registry::"${connectionParts[2]}"
-echo ::add-mask::${connectionParts[0]}
+echo ::add-mask::${connectionParts[2]}
